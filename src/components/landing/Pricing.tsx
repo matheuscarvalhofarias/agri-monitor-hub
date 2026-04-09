@@ -6,10 +6,10 @@ const plans = [
     name: "Starter",
     price: "R$ 197",
     period: "/mês",
-    description: "Para pequenos produtores começando a digitalizar.",
+    description: "Para pequenos produtores digitalizando a operação.",
     features: [
       "Até 3 propriedades",
-      "Monitoramento climático básico",
+      "Dados climáticos básicos",
       "Relatórios mensais",
       "Suporte por e-mail",
     ],
@@ -19,14 +19,14 @@ const plans = [
     name: "Profissional",
     price: "R$ 497",
     period: "/mês",
-    description: "Para produtores que buscam máxima eficiência.",
+    description: "Para quem busca máxima eficiência produtiva.",
     features: [
       "Até 15 propriedades",
       "Sensores IoT integrados",
-      "Imagens de satélite NDVI",
-      "Alertas inteligentes por IA",
+      "Imagens NDVI por satélite",
+      "Alertas com IA",
       "Relatórios semanais",
-      "Suporte prioritário",
+      "Suporte prioritário 24/7",
     ],
     highlighted: true,
   },
@@ -34,14 +34,14 @@ const plans = [
     name: "Enterprise",
     price: "Sob consulta",
     period: "",
-    description: "Para cooperativas e grandes operações agrícolas.",
+    description: "Para cooperativas e grandes operações.",
     features: [
       "Propriedades ilimitadas",
-      "API personalizada",
+      "API dedicada",
       "Integração com ERPs",
-      "Gerente de conta dedicado",
-      "SLA garantido",
-      "Treinamento da equipe",
+      "Gerente de conta",
+      "SLA garantido 99.99%",
+      "Onboarding completo",
     ],
     highlighted: false,
   },
@@ -49,50 +49,48 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24">
+    <section id="planos" className="py-28">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Planos</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Planos</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Invista no futuro da sua fazenda
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Escolha o plano ideal e comece seu teste grátis de 14 dias.
-          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto items-start">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-2xl border p-8 flex flex-col ${
+              className={`relative rounded-2xl border p-8 flex flex-col transition-all duration-300 ${
                 plan.highlighted
-                  ? "bg-hero-gradient text-primary-foreground border-transparent shadow-xl scale-105"
-                  : "bg-card"
+                  ? "border-primary/50 bg-glow-card shadow-lg shadow-primary/5 scale-[1.02]"
+                  : "bg-card hover:border-glow"
               }`}
             >
-              <h3 className={`text-lg font-semibold mb-1 ${plan.highlighted ? "" : ""}`}>{plan.name}</h3>
-              <p className={`text-sm mb-5 ${plan.highlighted ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                {plan.description}
-              </p>
-              <div className="mb-6">
+              {plan.highlighted && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold">
+                  Mais popular
+                </div>
+              )}
+              <h3 className="text-lg font-semibold mb-1">{plan.name}</h3>
+              <p className="text-sm text-muted-foreground mb-6">{plan.description}</p>
+              <div className="mb-8">
                 <span className="text-4xl font-extrabold">{plan.price}</span>
-                <span className={`text-sm ${plan.highlighted ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                  {plan.period}
-                </span>
+                <span className="text-sm text-muted-foreground">{plan.period}</span>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <Check className={`w-4 h-4 mt-0.5 shrink-0 ${plan.highlighted ? "text-primary-foreground" : "text-primary"}`} />
-                    <span className={plan.highlighted ? "text-primary-foreground/90" : ""}>{feature}</span>
+                  <li key={feature} className="flex items-start gap-2.5 text-sm">
+                    <Check className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
+                    <span className="text-muted-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
               <Button
                 className={`w-full ${
                   plan.highlighted
-                    ? "bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-                    : "bg-hero-gradient text-primary-foreground hover:opacity-90"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "bg-secondary text-foreground hover:bg-secondary/80"
                 }`}
                 size="lg"
               >

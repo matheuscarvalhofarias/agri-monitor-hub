@@ -1,58 +1,53 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-farm.jpg";
+import { ArrowRight } from "lucide-react";
+import dashboardImage from "@/assets/dashboard-mockup.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative pt-28 pb-0 overflow-hidden bg-glow">
       <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-6">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-glow bg-secondary text-sm text-muted-foreground mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Monitoramento inteligente em tempo real
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-            Controle total das suas{" "}
-            <span className="text-gradient">propriedades agrícolas</span>
+
+          <h1 className="animate-fade-up-delay-1 text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-6">
+            Sua fazenda no
+            <br />
+            <span className="text-gradient">controle total</span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Dashboard completa para monitorar clima, solo, irrigação e produtividade. 
-            Tome decisões baseadas em dados e aumente sua safra.
+
+          <p className="animate-fade-up-delay-2 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            Dashboard completa para monitorar clima, solo, irrigação e produtividade.
+            Tome decisões baseadas em dados e maximize cada hectare.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-hero-gradient text-primary-foreground hover:opacity-90 px-8 h-12 text-base">
+
+          <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold">
               Teste grátis por 14 dias
               <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
-            <Button variant="outline" size="lg" className="h-12 text-base">
-              <Play className="mr-2 w-4 h-4" />
+            <Button variant="outline" size="lg" className="h-12 text-base border-border hover:bg-secondary text-muted-foreground hover:text-foreground">
               Ver demonstração
             </Button>
           </div>
         </div>
 
-        <div className="mt-16 relative rounded-2xl overflow-hidden shadow-2xl border">
-          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent z-10" />
-          <img 
-            src={heroImage} 
-            alt="Vista aérea de propriedade agrícola monitorada pelo AgroVista" 
-            className="w-full h-[400px] md:h-[500px] object-cover"
-            width={1920}
-            height={1080}
-          />
-          {/* Floating stats */}
-          <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-wrap gap-4">
-            {[
-              { label: "Hectares monitorados", value: "2.4M+" },
-              { label: "Propriedades ativas", value: "12.000+" },
-              { label: "Aumento médio na safra", value: "+23%" },
-            ].map((stat) => (
-              <div key={stat.label} className="glass rounded-xl px-5 py-3 border">
-                <p className="text-xl font-bold text-foreground">{stat.value}</p>
-                <p className="text-xs text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
+        {/* Dashboard mockup */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl" />
+          <div className="relative rounded-xl overflow-hidden border border-glow shadow-2xl shadow-primary/5">
+            <img
+              src={dashboardImage}
+              alt="Dashboard AgroVista mostrando mapa de NDVI, gráficos de solo e clima"
+              className="w-full"
+              width={1920}
+              height={1080}
+            />
           </div>
+          {/* Fade into next section */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </div>
       </div>
     </section>
