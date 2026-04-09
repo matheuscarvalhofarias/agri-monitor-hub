@@ -1,62 +1,59 @@
-import { CloudRain, Thermometer, Droplets, BarChart3, MapPin, Bell } from "lucide-react";
+import { Satellite, CloudSun, Droplets, BarChart3, Cpu, Bell } from "lucide-react";
 
 const features = [
   {
-    icon: CloudRain,
-    title: "Previsão Climática",
-    description: "Dados meteorológicos em tempo real com alertas de eventos extremos para cada talhão.",
+    icon: Satellite,
+    title: "Imagens de Satélite",
+    description: "Mapas NDVI atualizados a cada 5 dias para acompanhar a saúde da sua lavoura com precisão.",
   },
   {
-    icon: Thermometer,
-    title: "Análise de Solo",
-    description: "Monitore temperatura, umidade e nutrientes do solo com sensores IoT integrados.",
+    icon: CloudSun,
+    title: "Previsão Climática",
+    description: "Dados hiper-locais de temperatura, chuva, vento e umidade para cada talhão da fazenda.",
   },
   {
     icon: Droplets,
     title: "Gestão de Irrigação",
-    description: "Automatize e otimize a irrigação com base em dados de evapotranspiração e previsões.",
+    description: "Automatize a irrigação com sensores IoT e economize até 30% no consumo de água.",
   },
   {
     icon: BarChart3,
-    title: "Relatórios de Produtividade",
-    description: "Painéis completos com histórico de safras, estimativas de colheita e análise por talhão.",
+    title: "Relatórios de Safra",
+    description: "Histórico completo de produtividade com projeções de colheita baseadas em IA.",
   },
   {
-    icon: MapPin,
-    title: "Mapeamento por Satélite",
-    description: "Imagens NDVI e mapas de calor para identificar variações na lavoura em tempo real.",
+    icon: Cpu,
+    title: "IA para Diagnóstico",
+    description: "Detecte pragas, doenças e deficiências nutricionais automaticamente com visão computacional.",
   },
   {
     icon: Bell,
-    title: "Alertas Inteligentes",
-    description: "Notificações customizáveis para pragas, doenças, geadas e anomalias detectadas por IA.",
+    title: "Alertas em Tempo Real",
+    description: "Notificações instantâneas de geadas, chuvas fortes e anomalias detectadas nos sensores.",
   },
 ];
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-section-gradient">
+    <section id="recursos" className="py-28">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Recursos</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Tudo que você precisa em um só lugar
+        <div className="text-center max-w-2xl mx-auto mb-20">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Recursos</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+            Tudo em uma só plataforma
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Ferramentas poderosas para gerenciar suas propriedades com inteligência e precisão.
-          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group bg-card rounded-2xl border p-7 hover:shadow-lg hover:border-primary/30 transition-all duration-300"
+              className="group relative bg-card rounded-2xl border p-7 hover:border-glow bg-glow-card transition-all duration-500"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5 group-hover:bg-hero-gradient transition-colors duration-300">
-                <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className="w-11 h-11 rounded-xl bg-secondary flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
+                <feature.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+              <h3 className="text-base font-semibold mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
