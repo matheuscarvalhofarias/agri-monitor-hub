@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-dark border-b">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-light border-b">
       <div className="container flex items-center justify-between h-16">
         <div className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden glass-dark border-t px-6 py-4 flex flex-col gap-3">
+        <div className="md:hidden glass-light border-t px-6 py-4 flex flex-col gap-3">
           {["Recursos", "Planos", "Depoimentos"].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-muted-foreground py-1">
               {item}
