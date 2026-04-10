@@ -35,10 +35,10 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="recursos" className="py-28">
+    <section id="recursos" className="py-24">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Recursos</p>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Recursos</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Tudo em uma só plataforma
           </h2>
