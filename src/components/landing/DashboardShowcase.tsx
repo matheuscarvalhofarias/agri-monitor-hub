@@ -26,10 +26,10 @@ const highlights = [
 
 const DashboardShowcase = () => {
   return (
-    <section className="py-28 border-t">
+    <section className="py-24 border-t">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">A Dashboard</p>
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">A Dashboard</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Tudo que acontece na sua fazenda,{" "}
             <span className="text-gradient">em uma única tela</span>

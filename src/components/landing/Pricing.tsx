@@ -49,10 +49,10 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="planos" className="py-28">
+    <section id="planos" className="py-24 border-t">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Planos</p>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Planos</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Invista no futuro da sua fazenda
           </h2>

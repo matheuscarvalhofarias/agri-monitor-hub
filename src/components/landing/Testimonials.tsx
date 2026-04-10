@@ -63,10 +63,10 @@ const Testimonials = () => {
   const secondRow = testimonials.slice(4);
 
   return (
-    <section id="depoimentos" className="py-28 border-t overflow-hidden">
+    <section id="depoimentos" className="py-24 border-t overflow-hidden">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">Depoimentos</p>
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">Depoimentos</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Quem usa, recomenda
           </h2>

@@ -4,7 +4,7 @@ import dashboardImage from "@/assets/dashboard-mockup.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 pb-0 overflow-hidden">
+    <section className="relative pt-28 pb-16 overflow-hidden">
       {/* Subtle green glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 

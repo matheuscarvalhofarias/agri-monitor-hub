@@ -19,7 +19,7 @@ const CTA = () => {
   };
 
   return (
-    <section className="py-28">
+    <section className="py-24 border-t">
       <div className="container">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
